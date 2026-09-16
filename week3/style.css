@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --color-primary: #3f7869;
+}
+
+
+/* reusables stayles */
+.btn{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+}
+.btn-ghost{
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+
+body {
+  font-size: 16px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+header a {
+  font-size: 2rem;
+}
+.business-logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.business-logo svg{
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  padding: 5px
+}
+.business-logo h1{
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+nav ul{
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  align-self: center;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  font-weight: 500;
+  /* transition: all 0.3s ease-in-out; */
+}
+
