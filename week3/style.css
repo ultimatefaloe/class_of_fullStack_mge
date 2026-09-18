@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   padding: 0;
@@ -6,31 +6,22 @@
   box-sizing: border-box;
 }
 
+/* :root {
+  --color-primary: #3f7869;
+} */
+
 :root{
   --color-primary: #3f7869;
+  --secindary-color: #ffca1d;
+  --neutral-color: #ffffff;
+  --black: #000000;
+
+  --rounded-sm: 5px;
+  --rounded-md: 10px;
+  --rounded-full: 9999px;
 }
 
-
-/* reusables stayles */
-.btn{
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--color-primary);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  border: none;
-}
-.btn-ghost{
-  background-color: transparent;
-  color: var(--color-primary);
-  border: 1px solid var(--color-primary);
-}
-
-
-body {
-  font-size: 16px;
-  padding: 10px;
+.roboto {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -38,47 +29,105 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
+/* reusables styles */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: var(--neutral-color);
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+}
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+
+html {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    Segoe UI Symbol,
+    "Noto Color Emoji";
+}
+
+body {
+  font-size: 16px;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 header {
-  padding: 10px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f5f5f5;
+  box-shadow: 2px 3px 8px 2px #e5e5e5;
 }
 header a {
   font-size: 2rem;
 }
-.business-logo{
+.business-logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.business-logo svg{
+.business-logo svg {
   background-color: var(--color-primary);
   border-radius: 10px;
-  padding: 5px
+  padding: 5px;
 }
-.business-logo h1{
+.business-logo h1 {
   font-size: 1.5rem;
   color: var(--color-primary);
 }
-
-nav ul{
+/* nav{
   display: flex;
-  gap: 15px;
+  justify-self: flex-end;
+} */
+
+nav ul {
+  display: flex;
+  gap: 20px;
 }
 
-nav ul li{
+nav ul li {
   list-style: none;
   display: inline-block;
   align-self: center;
 }
 
-nav ul li a{
+nav ul li a {
   text-decoration: none;
-  color: var(--color-primary);
+  color: var(--black);
   font-size: 1.2rem;
   font-weight: 500;
-  /* transition: all 0.3s ease-in-out; */
+  /* transition: color 0.3s ease, font-weight 0.5s ease-in-out; */
+  transition: all 0.3s ease-in-out;
+  padding: 5px
+}
+nav ul li a:hover{
+  color: var(--color-primary);
+}
+
+.box-hover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  transition: all 0.3s ease-in-out;
+  border-radius: var(--rounded-sm);
+}
+
+.box-hover:hover{
+  background-color: var(--secindary-color);
 }
 
