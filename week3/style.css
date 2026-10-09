@@ -76,6 +76,21 @@
   border-radius: var(--rounded-full);
 }
 
+
+/* badge style */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: var(--primary-color);
+  color: var(--neutral-color);
+  border-radius: var(--rounded-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
 /* visibility styles */
 .hidden {
   display: none;
@@ -180,17 +195,15 @@ nav ul li a:hover {
 
 .pseudo-underline::before {
   content: "";
-  width: 5px;
-  height: 0;
+  width: 0;
+  height: 5px;
   background-color: var(--primary-color);
   position: absolute;
-  top: 10px;
-  left: 0;
-  right: 5px;
+  bottom: -3px;
   transition: all 0.3s ease-in-out;
 }
 .pseudo-underline:hover::before {
-  height: 100%;
+  width: 100%;
 }
 
 .box-hover {
@@ -337,6 +350,90 @@ nav ul li a:hover {
     top: 5px;
   }
 }
+
+/* featured style section */
+
+.featured{
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.feat-head-con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.feat-head-con h2{
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: bolder;
+  margin: 10px 0;
+}
+.cake-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.card{
+  position: relative;
+  width: 250px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: var(--rounded-sm);
+  box-shadow: 0 1px 2px 1px #e5e5e5;
+}
+.card-img img{
+  width: 100%;
+  height: auto;
+  border-top-left-radius: var(--rounded-sm);
+  border-top-right-radius: var(--rounded-sm);
+}
+.card-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.card-content h3{
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: bolder;
+  transition: all 0.5s ease-in-out;
+}
+.card-content h3:hover{
+  color: var(--secondary-color);
+}
+.card-content p{
+  font-size: 1rem;
+  color: var(--black);
+  font-weight: light;
+}
+.card-cta{
+  justify-content: space-between;
+  align-items: center;  
+  margin: 10px 0;
+}
+.card-cta p{
+  color: var(--primary-color);
+}
+.card-btn{
+  padding: 8px 15px;
+  font-weight: 500;
+}
+
+
+
+
+
+
+
 
 
 @keyframes floatBounce {
